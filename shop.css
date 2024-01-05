@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+#menu {
+	background: #883726;
+	height: 60px;
+	padding-right: 18px;
+	border-radius: 4px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+	text-align: right;
+}
+#menu li {
+	display: inline-block;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 60px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+	text-transform: capitalize;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #BB9C88;
+	background: #E8D3CE;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 60px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	color: #FFFFFF;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#444444;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:#FFFFFF}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+body {
+    background-color: #E8D3CE;
+    opacity: 0.8;
+    background-image: url('../images/bunnies/background_shop.jpeg') ;
+    background-size: 1500px 1600px;
+    font-family:Bricolage Grotesque;
+}
+header h1 {
+    text-align: center; 
+    margin-bottom: 30px;
+    margin-top: 60px;
+    max-width: 100%;
+}
+h2 {
+    max-width: 80%;
+    margin-left: 100px;
+}
+.img {
+    text-align: center;
+}
+main h1 {
+    text-align: center;
+}
+.parent {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+.merch1 { 
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+ .merch1 img {
+    position: relative;
+    left: 50px; 
+    box-shadow: 10px 10px #b07777; 
+}
+.merch1 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center; 
+}
+.merch1:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+}
+.merch2 { 
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+ .merch2 img {
+    position: relative;
+    left: 50px;  
+    box-shadow: 10px 10px #b07777; 
+}
+.merch2 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center; 
+}
+.merch2:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+}
+.merch3 { 
+    grid-area: 1 / 3 / 2 / 4;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.merch3 img {
+    position: relative;
+    left: 50px; 
+    box-shadow: 10px 10px #b07777;  
+}
+.merch3 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center; 
+}
+.merch3:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+}
+.merch4 { 
+    grid-area: 2 / 1 / 3 / 2; 
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.merch4 img {
+    position: relative;
+    left: 50px;  
+    box-shadow: 10px 10px #b07777; 
+}
+.merch4 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center; 
+}
+.merch4:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+.merch5 { grid-area: 2 / 2 / 3 / 3; 
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+ }
+.merch5 img {
+    position: relative;
+    left: 50px;  
+    box-shadow: 10px 10px #b07777; 
+}
+.merch5 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center;  
+}
+.merch5:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+.merch6 { grid-area: 2 / 3 / 3 / 4; 
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+ .merch6 img {
+    position: relative;
+    left: 50px; 
+    box-shadow: 10px 10px #b07777;  
+}
+.merch6 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center; 
+}
+.merch6:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+.merch7 { grid-area: 3 / 1 / 4 / 2; 
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;   
+}
+.merch7 img {
+    position: relative;
+    left: 50px; 
+    box-shadow: 10px 10px #b07777;  
+}
+.merch7 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center;  
+}
+.merch7:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+.merch8 { grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.merch8 img {
+    position: relative;
+    left: 50px;  
+    box-shadow: 10px 10px #b07777; 
+}
+.merch8 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center; 
+}
+.merch8:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+.merch9 { 
+    grid-area: 3 / 3 / 4 / 4; 
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.merch9 img {
+    position: relative;
+    left: 50px; 
+    box-shadow: 10px 10px #b07777;  
+}
+.merch9 p {
+   width: 80%;
+   padding-left: 40px;
+   text-align: center;  
+}
+.merch9:hover {
+    opacity: 0.7; 
+    transition: opacity 0.3s ease;
+}
+.myButton {
+	box-shadow: 0px 10px 14px -7px #ac5b4a;
+	background-color:#883726;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:8px 12px;
+	text-decoration:none;
+    text-align: center;
+    width: 25%;
+    height:50%;
+    margin-left: 140px;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+ footer {
+    margin-top: 40px;
+    text-align: center;
+    height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	.html {
+      width: 100%;
+	}
+
+   body {
+      background-size: 100%;
+      
+   }
+
+   .parent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: center;
+   }
+
+
+
+}
